@@ -6,7 +6,7 @@
 #    By: patrisor <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/22 07:54:53 by patrisor          #+#    #+#              #
-#    Updated: 2019/03/09 15:06:09 by patrisor         ###   ########.fr        #
+#    Updated: 2019/04/29 01:43:19 by patrisor         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS = ft_atoi.c \
 	   ft_memcpy.c \
 	   ft_memmove.c \
 	   ft_memset.c \
+	   ft_pow.c \
 	   ft_putchar.c \
 	   ft_putchar_fd.c \
 	   ft_putendl.c \
@@ -48,6 +49,8 @@ SRCS = ft_atoi.c \
 	   ft_putstr_fd.c \
 	   ft_putnbr.c \
 	   ft_putnbr_fd.c \
+	   ft_quicksort.c \
+	   ft_sqrt.c \
 	   ft_strcat.c \
 	   ft_strlen.c \
 	   ft_strcpy.c \
@@ -77,7 +80,8 @@ SRCS = ft_atoi.c \
 	   ft_strtrim.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
-	   ft_swap.c
+	   ft_swap.c \
+	   get_next_line.c
 
 all: $(NAME)
 

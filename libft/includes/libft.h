@@ -6,16 +6,23 @@
 /*   By: patrisor <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/23 13:20:29 by patrisor          #+#    #+#             */
-/*   Updated: 2019/02/26 19:22:52 by patrisor         ###   ########.fr       */
+/*   Updated: 2019/04/29 01:43:52 by patrisor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+# define BUFF_SIZE 42
 
-char			*ft_strsome(size_t size, char c);
+# include "fcntl.h"
+# include "unistd.h"
+# include "stdlib.h"
+# include "libft.h"
+# include "sys/types.h"
+# include "sys/uio.h"
+
+int				get_next_line(const int fd, char **line);
+int				ft_new_line(char **s, char **line, int fd, int bytes);
 int				ft_countwords(char const *str, char c);
 void			*ft_memset(void *str, int c, size_t len);
 size_t			ft_strlen(const char *s);
@@ -75,6 +82,7 @@ char			*ft_strtrim(char const *s);
 int				ft_islower(int c);
 int				ft_isupper(int c);
 void			ft_swap(void *data1, void *data2, size_t size);
+void			ft_quicksort(int *array, int left, int right);
 
 typedef struct	s_list
 {
@@ -87,7 +95,23 @@ t_list			*ft_lstnew(const void *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *n);
-void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+typedef unsigned char		t_bool;
+typedef unsigned char		t_char;
+
+typedef unsigned char		t_uint8;
+typedef unsigned short		t_uint16;
+typedef unsigned long		t_uint32;
+typedef unsigned long long	t_uint64;
+
+typedef signed char			t_int8;
+typedef signed short		t_int16;
+typedef signed long			t_int32;
+typedef signed long long	t_int64;
+
+int				ft_pow(int x, int y);
+double			ft_sqrt(double x);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: patrisor <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 13:56:32 by patrisor          #+#    #+#             */
-/*   Updated: 2019/03/09 16:35:02 by patrisor         ###   ########.fr       */
+/*   Updated: 2019/03/11 00:55:12 by patrisor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,9 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		list = list->next;
 	}
 	return (new);
+}
+
+int main (void)
+{
+	
 }
